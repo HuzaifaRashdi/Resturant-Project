@@ -15,11 +15,11 @@
     @include("admin.admincss")
   </head>
   <body>
-    
+  <div class="container-scroller">
      @include("admin.navbar")
-     adafaf
+     
 
      @include("admin.adminscript")
-  
+</div>
   </body>
 </html>

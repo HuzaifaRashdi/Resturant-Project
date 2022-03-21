@@ -17,19 +17,11 @@
   <body>
   <div class="container-scroller">
      @include("admin.navbar")
-   <div class="container-fluid page-body-wrapper">
-    <div class="" align="center">
-      <h1 class="title">Add product</h1>
 
- @if(session()->has('message')) 
-
-<div class="alert alert-success">
-<button type="button" class="close"  data-dismiss="alert">X</button>
-{{session()->get('message')}}
-</div>
-
-@endif
-     <div style="position: relative; top: 60px; right: -150px">
+    
+         
+         <br></br>
+          <div style="position: relative; top: 60px; right: -150px">
 
      <form action="{{url('uploadfood')}}" method="post" enctype="multipart/form-data">
              
@@ -46,7 +38,7 @@
              <br></br>
              <div>
                  <label>Image</label>
-                 <input style="color:blue" type="file" name="image" placeholder="" required>
+                 <input  type="file" name="image" placeholder="" required>
              </div>
              <br></br>
              <div>
@@ -59,21 +51,36 @@
                  
              </div>
          </form>
-         <br></br>
+         
          <div>
-           <table bgcolor="black">
-             <tr>
-               <th style="padding: 30px">Food Name</th>
+           <table bgcolor="black" >
+             
+           <tr>
                <th style="padding: 30px">Price</th>
                <th style="padding: 30px">Description</th>
                <th style="padding: 30px">Image</th>
-             </tr>
-           </table>
-         </div>
-</div>
+               <th style="padding: 30px">Action</th>
+               <th style="padding: 30px">Action2</th>
+            </tr>
+             
+             @foreach($data as $data)
+             <tr align="center">
+                 <td>{{$data->title}}</td>
+                 <td>{{$data->price}}</td>
+                 <td>{{$data->description}}</td>
+                 <td><img style="height: 100px; width: 100px;" src="/foodimage/{{$data->image}}" alt=""></td>
+                 <td><a href="{{url('/deletemenu',$data->id)}}">Delete</a></td>
+                 <td><a href="{{url('/updateview',$data->id)}}">Update</a></td>
 
-     </div>
+             </tr>
+            @endforeach
+          
+           </table>
+           <br></br>
+         </div>
+         </div>
      @include("admin.adminscript")
 </div>
+
   </body>
 </html>
