@@ -7,6 +7,9 @@ use App\Models\User;
 use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\Foodchefs;
+use App\Models\Cart;
+use App\Models\Order;
+
 class AdminController extends Controller
 {
     public function user()
@@ -64,7 +67,7 @@ class AdminController extends Controller
     public function updateview($id)
     {
         $data=food::find($id);
-        return view("admin.updateview", compact("data"));
+        return view("admin.updateview",compact("data"));
 
         
         return redirect()->back();
@@ -89,8 +92,6 @@ class AdminController extends Controller
         
         return redirect()->back();
     }
-
-
 
     public function reservation(Request $req)
     {
@@ -126,7 +127,8 @@ class AdminController extends Controller
 
     public function viewchefs()
     {
-        return view("admin.adminchefs");
+        $data=foodchefs::all();
+        return view("admin.adminchefs",compact("data"));
     }
        
     public function uploadchefs(Request $req)
@@ -148,6 +150,49 @@ class AdminController extends Controller
         $data->save();
 
         return redirect()->back();
+    }
+
+    public function updatechef(Request $req , $id)
+    {
+        $data=foodchefs::find($id);
+
+        return view("admin.updatechef",compact("data"));
+    }
+
+    public function updatefoodchef(Request $req , $id)
+    {
+        $data=foodchefs::find($id);
+
+        $image=$req->image;
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $req->image->move('foodchefsimage',$imagename);
+
+        $data->image=$imagename;
+
+        $data->name=$req->name;
+
+        $data->speciality=$req->speciality;
+
+        $data->save();
+        
+        return redirect()->back();
+
+
+    }
+
+    public function deletefoodchefs($id)
+    {
+        $data=foodchefs::find($id);
+        $data->delete();
+        
+        return redirect()->back();
+    }
+
+    public function orders()
+
+    {
+        $data=order::all();
+        return view("admin.order",compact('data'));
     }
 
 

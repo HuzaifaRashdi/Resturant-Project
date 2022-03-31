@@ -41,7 +41,23 @@ Route::get("/viewchefs",[AdminController::class,"viewchefs"]);
 
 Route::post("/uploadchefs",[AdminController::class,"uploadchefs"]);
 
+Route::get("/updatechef/{id}",[AdminController::class,"updatechef"]);
+
+Route::post("/updatefoodchef/{id}",[AdminController::class,"updatefoodchef"]);
+
+Route::get("/deletefoodchefs/{id}",[AdminController::class,"deletefoodchefs"]);
+
+Route::post("/addcart/{id}",[HomeController::class,"addcart"]);
+
+Route::get("/showcart/{id}",[HomeController::class,"showcart"]);
+
+Route::get("/remove/{id}",[HomeController::class,"remove"]);
+
 Route::get("/redirect",[HomeController::class,"redirect"]);
+
+Route::post("/oderconfirm",[HomeController::class,"oderconfirm"]);
+
+Route::get("/orders",[AdminController::class,"orders"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

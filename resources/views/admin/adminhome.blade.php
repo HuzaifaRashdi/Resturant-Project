@@ -7,8 +7,6 @@
   
 </x-app-layout>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,8 +16,8 @@
   <div class="container-scroller">
      @include("admin.navbar")
      
-
+     </div>
      @include("admin.adminscript")
-</div>
+
   </body>
 </html>

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <title>Klassy Cafe - Restaurant HTML Template</title>
 <!--
     
@@ -84,6 +84,20 @@ https://templatemo.com/tm-558-klassy-cafe
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
                        <li>
+
+                       <li class="scroll-to-section" style="background-color:red">
+                       @auth 
+                       <a href="{{url('/showcart',Auth::user()->id)}}">
+                      
+                       Cart{{$count}}
+                       </a>
+                       @endauth
+
+                       @guest
+                       Cart[0]
+                       @endguest
+                        </a></li> 
+                       <li>
                        @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -105,6 +119,8 @@ https://templatemo.com/tm-558-klassy-cafe
                         @if (Route::has('register'))
                         <li> <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a></li>
                         @endif
+                        <!-- <li> <a href="{{ route('dashboard') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a></li>
+                        -->
                     @endauth
                 </div>
             @endif
@@ -510,6 +526,8 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 
     <!-- Bootstrap -->
     <script src="assets/js/popper.js"></script>

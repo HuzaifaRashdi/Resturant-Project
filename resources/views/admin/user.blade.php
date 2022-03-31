@@ -29,15 +29,17 @@
      @include("admin.navbar")
 
      <div style="position: relative; top: 60px; right: -150px">
-         <table bgcolor="grey" border="3px">
+         <table class="table table-bordered" style="background-color:white">
              <tr>
-                 <th style="padding: 30px">Name</th>
-                 <th style="padding: 30px">Email</th>
-                 <th style="padding: 30px">Action</th>
+                 <th scope="col" style="padding: 30px" >#</th>
+                 <th scope="col" style="padding: 30px">Name</th>
+                 <th scope="col" style="padding: 30px">Email</th>
+                 <th scope="col" style="padding: 30px">Action</th>
              </tr>
 
              @foreach($data as $data)
-             <tr align="center">
+             <tr align="center" style="background-color:black">
+                 <td>{{$data->id}}</td>
                  <td>{{$data->name}}</td>
                  <td>{{$data->email}} </td>
                  @if($data->usertype=="0")

@@ -26,8 +26,8 @@
      <form action="{{url('uploadfood')}}" method="post" enctype="multipart/form-data">
              
              @csrf
-             <div>
-                 <label>Title</label>
+             <div class="mb-3 mt-3">
+                 <label for="title" class="form-label">Title</label>
                  <input style="color:blue" type="text" name="title" placeholder="Write a Title" required>
              </div>
              <br></br>
@@ -51,20 +51,22 @@
                  
              </div>
          </form>
+         <br></br>
          
          <div>
-           <table bgcolor="black" >
+           <table class="table table-bordered" style="background-color:white" >
              
            <tr>
-               <th style="padding: 30px">Price</th>
-               <th style="padding: 30px">Description</th>
-               <th style="padding: 30px">Image</th>
-               <th style="padding: 30px">Action</th>
-               <th style="padding: 30px">Action2</th>
+               <th scope="col" style="padding: 30px">Title</th>
+               <th scope="col" style="padding: 30px">Price</th>
+               <th scope="col" style="padding: 30px">Description</th>
+               <th scope="col" style="padding: 30px">Image</th>
+               <th scope="col" style="padding: 30px">Delete</th>
+               <th scope="col" style="padding: 30px">Update</th>
             </tr>
              
              @foreach($data as $data)
-             <tr align="center">
+             <tr align="center" style="background-color:black">
                  <td>{{$data->title}}</td>
                  <td>{{$data->price}}</td>
                  <td>{{$data->description}}</td>

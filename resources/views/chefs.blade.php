@@ -13,8 +13,7 @@
             <div class="row">
             @foreach($data2 as $data2)
                 <div class="col-lg-4">
-                
-                    <div class="chef-item">
+                <div class="chef-item">
                         <div class="thumb">
                             <div class="overlay"></div>
                             <ul class="social-icons">
