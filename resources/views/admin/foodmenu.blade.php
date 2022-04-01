@@ -54,7 +54,7 @@
          <br></br>
          
          <div>
-           <table class="table table-bordered" style="background-color:white" >
+           <table class="table table-bordered" style="background-color:white; margin-bottom :50px;" >
              
            <tr>
                <th scope="col" style="padding: 30px">Title</th>

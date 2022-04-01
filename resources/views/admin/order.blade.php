@@ -17,8 +17,14 @@
   <body>
   <div class="container-scroller">
      @include("admin.navbar")
-     <div style="position: relative; top: 60px; right: -150px">
+     <div class="container">
+       <h1>Costumer Order</h1>
+<form action="{{url('/search')}}" method="get">
+@csrf
+<input type="text" name="search" style="color:blue;">
+<input type="submit" value="search" class="btn btn-outline-success" >
 
+</form>
      <table class="table">     
         
          <tr>
@@ -39,7 +45,7 @@
              <td>{{$data->phone}}</td>
              <td>{{$data->address}}</td>
              <td>{{$data->foodname}}</td>
-             <td>{{$data->price}}</td>
+             <td>{{$data->price}}RS</td>
              <td>{{$data->quantity}}</td>
              <td>{{$data->price * $data->quantity}}</td>
          </tr>

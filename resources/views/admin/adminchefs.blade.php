@@ -50,6 +50,8 @@
     </div>
 
 </form>
+<div>
+
 <table bgcolor="black" >
              
              <tr>
@@ -73,9 +75,12 @@
             
              </table>
              <br></br>
+             </div>
+            
       </div>
-</div>
+
 @include("admin.adminscript")
+</div>
   </body>
 </html>
 

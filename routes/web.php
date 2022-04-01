@@ -59,6 +59,8 @@ Route::post("/oderconfirm",[HomeController::class,"oderconfirm"]);
 
 Route::get("/orders",[AdminController::class,"orders"]);
 
+Route::get("/search",[AdminController::class,"search"]);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

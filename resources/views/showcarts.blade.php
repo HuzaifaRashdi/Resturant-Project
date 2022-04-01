@@ -2,15 +2,14 @@
 <html lang="en">
 
   <head>
-      <base href="/public">
-
+  <base href="/public">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
     <title>Klassy Cafe - Restaurant HTML Template</title>
 <!--
     
@@ -86,7 +85,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
-                       <li>
+                       <!-- <li>          -->
 
                        <li class="scroll-to-section" style="background-color:red">
                        @auth 
@@ -148,7 +147,7 @@ https://templatemo.com/tm-558-klassy-cafe
                  <th style="padding: 30px">quantity</th>
                  <th style="padding: 30px">Action</th>
               </tr>
-<form action="{{url('/oderconfirm')}}" method="post">
+ <form action="{{url('/oderconfirm')}}" method="post">
     @csrf
               @foreach($data as $data)
                <tr align="center">
@@ -179,13 +178,14 @@ https://templatemo.com/tm-558-klassy-cafe
                @endforeach
               
 
-    </table>      
+    </table> 
+         
     
-    <div align="center" style="padding:10px">
+     <div align="center" style="padding:10px">
 
-    <button class="btn btn-outline-primary" style="" type="button" id="order">Order Now</button>
+        <button class="btn btn-outline-primary" type="button" id="order">Order Now</button>
 
-    </div>
+     </div>
 
     <div id="appear" align="center" style="padding:10px; display:none;">
         <div style="padding:10px;">
@@ -205,18 +205,14 @@ https://templatemo.com/tm-558-klassy-cafe
 
         <div style="padding:10px;">
             <input type="submit" class="btn btn-outline-danger" value="Order confirm">
-            <button style="bg-color:black;" id="close" type="button" class="btn btn-outline-danger">Close</button>
+            <button id="close" type="button" class="btn btn-outline-danger">Close</button>
         </div>
 
     </div>
-
 </div>
 
 </form>
 
-    <!-- ***** Header Area End ***** -->
-
-    <!-- jQuery -->
     <script type="text/javascript">
 
         $("#order").click(
@@ -236,13 +232,11 @@ function()
 }
 );
 
-
+// <!-- jQuery -->
 
     </script>
 
     <script src="assets/js/jquery-2.1.0.min.js"></script>
-
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 
 
 
@@ -281,10 +275,6 @@ function()
             });
         });
 
-        $(document).ready( function () {
-    $('#table_id').DataTable();
-} );
-
     </script>
-  </body>
+  
 </html>
