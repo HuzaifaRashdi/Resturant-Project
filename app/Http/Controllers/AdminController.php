@@ -32,6 +32,7 @@ class AdminController extends Controller
     {
         
         $data=food::all();
+       
 
         return view("admin.foodmenu", compact("data"));
     }

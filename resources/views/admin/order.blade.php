@@ -15,47 +15,62 @@
     @include("admin.admincss")
   </head>
   <body>
-  <div class="container-scroller">
+  <div class="container-scroller content-wrapper">
      @include("admin.navbar")
-     <div class="container">
-       <h1>Costumer Order</h1>
-<form action="{{url('/search')}}" method="get">
-@csrf
-<input type="text" name="search" style="color:blue;">
-<input type="submit" value="search" class="btn btn-outline-success" >
+    <div style="position: relative; top: 0px; right: -10px">
+     <div class="col-12 grid-margin stretch-card">
+        <div class="container card ">
+          <div class="card-body">
+            <h2 class="card-title ">Search</h2>
+                <form action="{{url('/search')}}" method="get" class="forms-sample">
+                @csrf
+                    <input type="text" class="form-control" style="width:300px;" id="search" name="search" placeholder="Search">
+                    
+                </form>
+          </div>
+        </div>
+      </div>
 
-</form>
-     <table class="table">     
+      <div>
+         <div class="col-lg-12 stretch-card">
+            <div class="card">
+               <div class="card-body">
+                  <h4 class="card-title">Costumer Oders</h4>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-contextual">    
         
-         <tr>
-             <th scope="col" style="padding: 30px">#</th>
-             <th scope="col" style="padding: 30px">Name</th>
-             <th scope="col" style="padding: 30px">Phone</hd>
-             <th scope="col" style="padding: 30px">Address</th>
-             <th scope="col" style="padding: 30px">Food Name</th>
-             <th scope="col" style="padding: 30px">Price</hd>
-             <th scope="col" style="padding: 30px">Quantity</th>
-             <th scope="col" style="padding: 30px">Total Price</th>
-         </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Phone</hd>
+                            <th>Address</th>
+                            <th>Food Name</th>
+                            <th>Price</hd>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                        </tr>
          
-@foreach($data as $data)
-         <tr align="center" style="background-color:black">
-         <th scope="row">{{$data->id}}</th>
-             <td >{{$data->name}}</td>
-             <td>{{$data->phone}}</td>
-             <td>{{$data->address}}</td>
-             <td>{{$data->foodname}}</td>
-             <td>{{$data->price}}RS</td>
-             <td>{{$data->quantity}}</td>
-             <td>{{$data->price * $data->quantity}}</td>
-         </tr>
-         @endforeach
-     </table>
-     
-</div>
-     </div>
-     
-     @include("admin.adminscript")
+                         @foreach($data as $data)
 
-  </body>
+                         <tr class="table-info">
+                             <td >{{$data->id}}</td>
+                             <td >{{$data->name}}</td>
+                             <td>{{$data->phone}}</td>
+                             <td>{{$data->address}}</td>
+                             <td>{{$data->foodname}}</td>
+                             <td>{{$data->price}}RS</td>
+                             <td>{{$data->quantity}}</td>
+                             <td>{{$data->price * $data->quantity}}</td>
+                         </tr>
+                         @endforeach
+                      </table>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+@include("admin.adminscript")
+</div>
+</body>
 </html>

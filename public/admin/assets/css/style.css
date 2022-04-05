@@ -15685,9 +15685,7 @@ body {
 .tt-hint, .form-control:focus, .asColorPicker-input:focus, .dataTables_wrapper select:focus, .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:focus, .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=number], .select2-container--default .select2-selection--single:focus, .select2-container--default .select2-selection--single .select2-search__field:focus, .typeahead:focus,
 .tt-query:focus,
-.tt-hint:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none; }
+.tt-hint:focus 
 
 .form-control, .asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .typeahead,
@@ -19837,8 +19835,7 @@ div.tagsinput {
   color: white;
   background: rgba(0, 0, 0, 0.8);
   width: 100px;
-  margin-left: -50px;
-  -webkit-transition: 0.1s left, 0.1s top; }
+  margin-left: -50px; }
 
 .wysi-editor .wrap {
   max-width: 700px;
@@ -20835,3 +20832,227 @@ div.tagsinput {
   flex-grow: 1; }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+.form-container1{
+  font-family: 'Roboto', sans-serif;
+  padding: 42px 0 0 0;
+  position: relative;
+}
+.form-container1 .form-icon{
+  color: #fff;
+  background-color: #1E4AC5;
+  font-size: 50px;
+  text-align: center;
+  line-height: 95px;
+  height: 100px;
+  width: 100px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #20E4B2,0 0 20px rgba(0,0,0,0.3);
+  transform: translateX(-50%);
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  z-index: 1;
+}
+.form-container1 .form-horizontal{
+  background-color: #2048C4;
+  font-size: 0;
+  padding: 80px 30px 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.form-container1 .title{
+  color: #20E5B0;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 25px;
+}
+.form-horizontal1 .form-group1{
+  background-color: #fff;
+  width: calc(100% - 12px);
+  margin: 0 7px 25px 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+.form-horizontal1 .input-icon{
+  color: rgba(0,0,0,0.3);
+  background-color: #20E5B0;
+  font-size: 18px;
+  text-align: center;
+  line-height: 39px;
+  height: 38px;
+  width: 48px;
+  vertical-align: top;
+  display: inline-block;
+}
+.form-horizontal1 .form-control1{
+  color: #222;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: calc(100% - 53px);
+  height: 38px;
+  padding: 1px 10px 0 7px;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.form-horizontal1 textarea.form-control{
+  height: auto;
+  width: 100%;
+}
+.form-horizontal1 .form-control:focus{
+  box-shadow: none;
+  border: none;
+}
+.form-horizontal1 .form-control::placeholder{
+  color: #b5b5b5;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.form-horizontal1 .btn{
+  color: #fff;
+  background-color: #20E5B0;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px 7px 20px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.5);
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+.form-horizontal1 .btn:hover,
+.form-horizontal1 .btn:focus{
+  color: #2048C4;
+  background-color: #fff;
+  box-shadow: none;
+}
+@media only screen and (max-width:576px){
+  .form-container1 .form-group{
+      width: 100%;
+      margin: 0 0 25px;
+  }
+}.form-container1{
+    font-family: 'Roboto', sans-serif;
+    padding: 42px 0 0 0;
+    position: relative;
+}
+.form-container1 .form-icon{
+    color: #fff;
+    background-color: #1E4AC5;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    height: 100px;
+    width: 100px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #20E4B2,0 0 20px rgba(0,0,0,0.3);
+    transform: translateX(-50%);
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    z-index: 1;
+}
+.form-container1 .form-horizontal1{
+    background-color: #2048C4;
+    font-size: 0;
+    padding: 80px 30px 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.form-container1 .title{
+    color: #20E5B0;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 25px;
+}
+.form-horizontal1 .form-group{
+    background-color: #fff;
+    width: calc(50% - 12px);
+    margin: 0 7px 25px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+.form-horizontal1 .input-icon{
+    color: rgba(0,0,0,0.3);
+    background-color: #20E5B0;
+    font-size: 18px;
+    text-align: center;
+    line-height: 39px;
+    height: 38px;
+    width: 48px;
+    vertical-align: top;
+    display: inline-block;
+}
+.form-horizontal1 .form-control{
+    color: #222;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: calc(100% - 53px);
+    height: 38px;
+    padding: 1px 10px 0 7px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.form-horizontal1 textarea.form-control{
+    height: auto;
+    width: 100%;
+}
+.form-horizontal1 .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.form-horizontal1 .form-control::placeholder{
+    color: #b5b5b5;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.form-horizontal1 .btn{
+    color: #fff;
+    background-color: #20E5B0;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px 7px 20px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.5);
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.form-horizontal1 .btn:hover,
+.form-horizontal1 .btn:focus{
+    color: #2048C4;
+    background-color: #fff;
+    box-shadow: none;
+}
+@media only screen and (max-width:576px){
+    .form-container1 .form-group{
+        width: 100%;
+        margin: 0 0 25px;
+    }
+}

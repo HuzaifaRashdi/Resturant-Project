@@ -23,11 +23,13 @@
           <a class="sidebar-brand brand-logo" href="index.html"><img src="admin/assets/images/logo.svg" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="admin/assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
+        <div>
         <ul class="nav">
           
           <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
           </li>
+          
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('/users')}}">
               <span class="menu-icon">
@@ -74,6 +76,7 @@
           </li>
          
         </ul>
+        </div>
       </nav>
       
          
